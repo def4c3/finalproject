@@ -7,6 +7,7 @@
 [Ll]ogs/
 [Mm]emoryCaptures/
 
+
 # User-specific files
 UserSettings/
 .vscode/
@@ -21,7 +22,7 @@ UserSettings/
 *.pidb
 *.booproj
 *.svd
-
+.tmp.driveupload/
 # Crash reports
 sysinfo.txt
 crashlytics-build.properties

@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -10,6 +10,7 @@ using JetBrains.Annotations;
 public class UIManager : MonoBehaviour
 {
     public GameObject startMenu, settingsMenu, ingameMenu, UICamera, FPSController, EventSystem;
+    
 
 
 
@@ -19,7 +20,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         GameStart();
-        
+
 
     }
 
@@ -29,6 +30,10 @@ public class UIManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Gameplay")
         {
             CheckForMenuKeyPressed();
+        }
+        if (SceneManager.GetActiveScene().name == "GameStart")
+        {
+            UIBackToMenu();
         }
     }
 
@@ -79,10 +84,10 @@ public class UIManager : MonoBehaviour
             EventSystem.SetActive(false);
             CloseMouse();
             escapecounter = 0;
-        }    
+        }
     }
-    
-   
+
+
 
     public void ClouseMouse()
     {
@@ -128,6 +133,28 @@ public class UIManager : MonoBehaviour
         startMenu.SetActive(true);
         ingameMenu.SetActive(false);
     }
+    public void ClickedSettingsInGame()
+    {
+        ingameMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+    public void ClickedBackButtonInGame()
+    {
+        ingameMenu.SetActive(true);
+        settingsMenu.SetActive(false);
+    }
+    public void UIBackToMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            settingsMenu.SetActive(false);
+            ingameMenu.SetActive(false);
+            startMenu.SetActive(true);
+
+        }
+
+    }
+
 
 }
 
