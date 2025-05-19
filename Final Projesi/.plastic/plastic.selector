@@ -1,0 +1,4 @@
+repository "Final Projesi/Final Projesi@18966823957181@cloud"
+  path "/"
+    br "/main"
+    co "/main"

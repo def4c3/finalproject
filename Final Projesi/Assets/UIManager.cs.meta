@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1f189a9f2e087c9479126b59597c6b07
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startMenu: {fileID: 188623500445445647, guid: fc1fde7587be26746aa5839204b1b597, type: 3}
+  - settingsMenu: {fileID: 6651175575362887485, guid: 03fa8528e031b62468cb1436fb488a9b, type: 3}
+  - ingameMenu: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
